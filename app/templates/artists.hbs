@@ -1,0 +1,23 @@
+{{outlet}}
+<ul>
+
+{{#each model as |artist|}}
+  <li>{{artist.name}}
+    Songs
+    <ul>
+      {{#each artist.songs as |song|}}
+        <li>{{song.name}}</li>
+      {{/each}}
+    </ul>
+    Albums
+    <ul>
+      {{#each artist.albums as |album|}}
+        <li>{{album.name}}</li>
+      {{else}}
+        <li>No Albums</li>
+      {{/each}}
+    </ul>
+  </li>
+{{/each}}
+
+</ul>
